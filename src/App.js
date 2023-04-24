@@ -5,6 +5,8 @@ import { Profiledata } from "./module/profile";
 import Welcome  from "./components/Welcome";
 import BookList from "./components/BookList";
 import {BookData} from "./module/booklist";
+import { people } from "./module/person";
+import RenderPersonList from "./components/PersonList";
 
 function App() {
   return ( 
@@ -12,7 +14,8 @@ function App() {
       {/* <Avatar user={Profiledata.user} />
       <Greet name={Profiledata.user.name} />
       <Welcome /> */}
-      <BookList bookData= {BookData} />
+      {/* <BookList bookData= {BookData} /> */}
+      <RenderPersonList data={people} />
     </div>
   );
 }

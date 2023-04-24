@@ -14,10 +14,10 @@ export const BookData = [
     author: "Ram",
     isSold:false,
   },
-  
+
   {
     name: "Lord of rings",
     author: "Ram",
-    isSoled:true,
+    isSold:true,
   },
 ];
