@@ -6,8 +6,8 @@ import { Profiledata } from "./module/profile";
 function App() {
   return (
     <div className="App">
-      <Greet name={Profiledata.user.name} />
       <Avatar user={Profiledata.user} />
+      <Greet name={Profiledata.user.name} />
     </div>
   );
 }

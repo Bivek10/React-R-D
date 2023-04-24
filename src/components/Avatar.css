@@ -1,0 +1,9 @@
+.Avatar{
+    border: 2px solid red;
+    border-radius: 50px;
+}
+
+.Avatar img :hover{
+    background-color: blue;
+    transform: scale(10,10);
+}
