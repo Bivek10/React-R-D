@@ -3,13 +3,16 @@ import Avatar from "./components/Avatar";
 import Greet from "./components/Greet";
 import { Profiledata } from "./module/profile";
 import Welcome  from "./components/Welcome";
+import BookList from "./components/BookList";
+import {BookData} from "./module/booklist";
 
 function App() {
   return ( 
     <div className="App">
-      <Avatar user={Profiledata.user} />
+      {/* <Avatar user={Profiledata.user} />
       <Greet name={Profiledata.user.name} />
-      <Welcome />
+      <Welcome /> */}
+      <BookList bookData= {BookData} />
     </div>
   );
 }
