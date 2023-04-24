@@ -5,7 +5,7 @@ import { Profiledata } from "./module/profile";
 import Welcome  from "./components/Welcome";
 
 function App() {
-  return (
+  return ( 
     <div className="App">
       <Avatar user={Profiledata.user} />
       <Greet name={Profiledata.user.name} />
