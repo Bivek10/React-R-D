@@ -7,15 +7,17 @@ import BookList from "./components/BookList";
 import {BookData} from "./module/booklist";
 import { people } from "./module/person";
 import RenderPersonList from "./components/PersonList";
+import SubscribeComp from "./components/Subscribe";
 
 function App() {
   return ( 
     <div className="App">
+      <SubscribeComp/>
       {/* <Avatar user={Profiledata.user} />
       <Greet name={Profiledata.user.name} />
       <Welcome /> */}
       {/* <BookList bookData= {BookData} /> */}
-      <RenderPersonList data={people} />
+      {/* <RenderPersonList data={people} /> */}
     </div>
   );
 }
