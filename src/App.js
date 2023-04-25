@@ -1,28 +1,25 @@
-import logo from "./logo.svg";
 import "./App.css";
-
-function MyButton() {
-  return <button>Click Here</button>;
-}
+import Avatar from "./components/Avatar";
+import Greet from "./components/Greet";
+import { Profiledata } from "./module/profile";
+import Welcome from "./components/Welcome";
+import BookList from "./components/BookList";
+import { BookData } from "./module/booklist";
+import { people } from "./module/person";
+import RenderPersonList from "./components/PersonList";
+import SubscribeComp from "./components/Subscribe";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <MyButton/>
+      <Counter />
+      {/* <SubscribeComp/> */}
+      {/* <Avatar user={Profiledata.user} />
+      <Greet name={Profiledata.user.name} />
+      <Welcome /> */}
+      {/* <BookList bookData= {BookData} /> */}
+      {/* <RenderPersonList data={people} /> */}
     </div>
   );
 }
