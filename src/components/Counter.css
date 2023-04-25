@@ -1,0 +1,37 @@
+
+.CounterDiv{
+  position: relative;
+
+    padding: 4em;
+    height: 20vh;
+    width: 100%;
+    
+    display:block;
+    
+}
+.ButtonsView button{
+  
+  margin-right: 2em;
+}
+
+
+.Increment, .Decrement{
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  border: none;
+}
+.Decrement{
+  position: absolute;
+  bottom: 10px;
+  right: 15vw;
+  background-color: brown;
+  color:wheat;
+}
+.Increment{
+  position: absolute;
+  bottom: 10px;
+  right: 22vw;
+  background-color:rgb(53, 162, 251);
+  color: white;
+}
