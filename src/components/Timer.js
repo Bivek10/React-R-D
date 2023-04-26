@@ -7,6 +7,7 @@ class Timer extends Component {
     super();
     this.state = {
       date: new Date(),
+      message:"Loading message from constructor"
     };
   }
 
@@ -17,6 +18,11 @@ class Timer extends Component {
       this.tick();
     }, 1000);
   }
+
+  
+
+
+
 
 
   tick() {
@@ -29,10 +35,14 @@ class Timer extends Component {
     clearInterval(this.timerID)
   }
 
+  static getDerivedStateFromProps(props, state) {
+    return {message: "Loading message from getDerivedStateFromProps" };
+  }
+
   render() {
     return (
       <div>
-        <h1>Hello, world!</h1>
+        <h1>{this.state.message}</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </div>
     );
