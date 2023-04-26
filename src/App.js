@@ -1,9 +1,10 @@
 import "./App.css";
-import HookCounterTwo from "./components/HookCouterTwo";
+import HookCounterThree from "./components/HookCounterThree";
 function App() {
   return (
     <div className="App">
-      <HookCounterTwo/>
+      <HookCounterThree />
+      {/* <HookCounterTwo/> */}
       {/* <Timer/> */}
       {/* <Counter /> */}
       {/* <SubscribeComp/> */}
