@@ -1,20 +1,11 @@
 import "./App.css";
-import Avatar from "./components/Avatar";
-import Greet from "./components/Greet";
-import { Profiledata } from "./module/profile";
-import Welcome from "./components/Welcome";
-import BookList from "./components/BookList";
-import { BookData } from "./module/booklist";
-import { people } from "./module/person";
-import RenderPersonList from "./components/PersonList";
-import SubscribeComp from "./components/Subscribe";
-import Counter from "./components/Counter";
-import Timer from "./components/Timer";
+import HookCounter from "./components/HookCounter";
 
 function App() {
   return (
     <div className="App">
-      <Timer/>
+      <HookCounter/>
+      {/* <Timer/> */}
       {/* <Counter /> */}
       {/* <SubscribeComp/> */}
       {/* <Avatar user={Profiledata.user} />
