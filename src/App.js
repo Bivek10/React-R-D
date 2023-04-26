@@ -9,11 +9,13 @@ import { people } from "./module/person";
 import RenderPersonList from "./components/PersonList";
 import SubscribeComp from "./components/Subscribe";
 import Counter from "./components/Counter";
+import Timer from "./components/Timer";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Timer/>
+      {/* <Counter /> */}
       {/* <SubscribeComp/> */}
       {/* <Avatar user={Profiledata.user} />
       <Greet name={Profiledata.user.name} />
