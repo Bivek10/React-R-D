@@ -1,14 +1,21 @@
 import "./App.css";
-import HookMouse from "./components/HookMouse";
-import IntervalHookCounter from "./components/IntervalHookCounter";
-import MouseContainer from "./components/MourseContainer";
-import HookDataFetch from "./components/HookDataFectch";
+import ComponentD from "./components/UseContextEx";
+import React from "react";
+
+export const UserContext = React.createContext();
+export const AddressContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-      <HookDataFetch/>
-    {/* <IntervalHookCounter/> */}
+      <UserContext.Provider value={"Bivek Karki"}>
+        <AddressContext.Provider value={"Dilibazar, Kathamndu"}>
+          <ComponentD />
+        </AddressContext.Provider>
+      </UserContext.Provider>
+
+      {/* <HookDataFetch /> */}
+      {/* <IntervalHookCounter/> */}
       {/* <MouseContainer/> */}
       {/* <HookMouse/> */}
       {/* <HookCounterFive/> */}
