@@ -14,7 +14,12 @@ function HookMouse() {
   useEffect(() => {
     console.log("use effects: called");
     window.addEventListener("mousemove", mouseMoveListener);
-  });
+
+    return ()=>{
+      console.log("unmounted listener");
+      window.removeEventListener("mousemove", mouseMoveListener)
+    }
+  },[]);
 
   return (
     <div>
@@ -22,6 +27,7 @@ function HookMouse() {
       <h1>Y coordinate:{y} </h1>
     </div>
   );
+
 }
 
 export default HookMouse;
