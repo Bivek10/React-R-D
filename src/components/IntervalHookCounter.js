@@ -8,7 +8,7 @@ function IntervalHookCounter() {
 
   useEffect(() => {
     const interval = setInterval(tick, 1000)
-    console.log(`count ${count}`)
+    console.log(`interval ${interval}`)
     return ()=>{
         console.log(`un mount count ${count}`)
         clearInterval(interval)

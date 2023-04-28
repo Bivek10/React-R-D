@@ -2,10 +2,13 @@ import "./App.css";
 import HookMouse from "./components/HookMouse";
 import IntervalHookCounter from "./components/IntervalHookCounter";
 import MouseContainer from "./components/MourseContainer";
+import HookDataFetch from "./components/HookDataFectch";
+
 function App() {
   return (
     <div className="App">
-    <IntervalHookCounter/>
+      <HookDataFetch/>
+    {/* <IntervalHookCounter/> */}
       {/* <MouseContainer/> */}
       {/* <HookMouse/> */}
       {/* <HookCounterFive/> */}
