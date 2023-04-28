@@ -1,5 +1,6 @@
 import "./App.css";
 import ComponentD from "./components/UseContextEx";
+import ComponentE from "./components/componentE";
 import React from "react";
 
 export const UserContext = React.createContext();
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <UserContext.Provider value={"Bivek Karki"}>
         <AddressContext.Provider value={"Dilibazar, Kathamndu"}>
-          <ComponentD />
+         <ComponentD/>
+          <ComponentE/>
         </AddressContext.Provider>
       </UserContext.Provider>
 
