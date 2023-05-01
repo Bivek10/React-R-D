@@ -4,6 +4,7 @@ import UseReducerEx from "./components/UseReducerEx";
 import ComponentE from "./components/componentE";
 import ParentCompoent from "./components/useCallbacksEx/ParentCompoent"
 import CounterMemo from "./components/useMemoHookEx/CounterMemo";
+import FocusInput from './components/useRefHook/FocusInput'
 import React from "react";
 
 
@@ -19,8 +20,8 @@ function App() {
           <ComponentE/>
         </AddressContext.Provider>
       </UserContext.Provider> */}
-      <CounterMemo/>
-
+      {/* <CounterMemo/> */}
+      <FocusInput/>
      {/* <ParentCompoent/> */}
       {/* <UseReducerEx/> */}
       {/* <HookDataFetch /> */}
