@@ -1,20 +1,16 @@
 import "./App.css";
-import Avatar from "./components/Avatar";
-import Greet from "./components/Greet";
-import { Profiledata } from "./module/profile";
-import Welcome from "./components/Welcome";
-import BookList from "./components/BookList";
-import { BookData } from "./module/booklist";
-import { people } from "./module/person";
-import RenderPersonList from "./components/PersonList";
-import SubscribeComp from "./components/Subscribe";
-import Counter from "./components/Counter";
-import Timer from "./components/Timer";
-import UseContextExOne from "./components/GlobalStateComponent/UseContextExOne";
-import UseContextExTwo from "./components/GlobalStateComponent/UseContextExTwo";
+import ComponentD from "./components/UseContextEx";
+import UseReducerEx from "./components/UseReducerEx";
+import ComponentE from "./components/componentE";
+import ParentCompoent from "./components/useCallbacksEx/ParentCompoent"
+import CounterMemo from "./components/useMemoHookEx/CounterMemo";
+import FocusInput from './components/useRefHook/FocusInput'
+import HookTimer from "./components/useRefHook/HookTimer";
 import React from "react";
 
-export const userContext = React.createContext();
+
+export const UserContext = React.createContext();
+export const AddressContext = React.createContext();
 
 function App() {
   return (
@@ -26,6 +22,26 @@ function App() {
         <UseContextExTwo />
       </userContext.Provider>
 
+      <HookTimer/>
+      {/* <UserContext.Provider value={"Bivek Karki"}>
+        <AddressContext.Provider value={"Dilibazar, Kathamndu"}>
+         <ComponentD/>
+          <ComponentE/>
+        </AddressContext.Provider>
+      </UserContext.Provider> */}
+      {/* <CounterMemo/> */}
+      {/* <FocusInput/> */}
+     {/* <ParentCompoent/> */}
+      {/* <UseReducerEx/> */}
+      {/* <HookDataFetch /> */}
+      {/* <IntervalHookCounter/> */}
+      {/* <MouseContainer/> */}
+      {/* <HookMouse/> */}
+      {/* <HookCounterFive/> */}
+      {/* <ClassCounterOne/> */}
+      {/* <HookCounterFour/> */}
+      {/* <HookCounterThree /> */}
+      {/* <HookCounterTwo/> */}
       {/* <Timer/> */}
       {/* <Counter /> */}
       {/* <SubscribeComp/> */}
