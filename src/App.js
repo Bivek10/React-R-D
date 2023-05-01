@@ -15,6 +15,13 @@ export const AddressContext = React.createContext();
 function App() {
   return (
     <div className="App">
+      {/* <userContext.Provider value={{username:"Bivek Karki"}}>
+      <UseContextExOne/>
+      </userContext.Provider> */}
+      <userContext.Provider value={{username:"Bivek Karki"}}>
+        <UseContextExTwo />
+      </userContext.Provider>
+
       <HookTimer/>
       {/* <UserContext.Provider value={"Bivek Karki"}>
         <AddressContext.Provider value={"Dilibazar, Kathamndu"}>
