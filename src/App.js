@@ -5,6 +5,7 @@ import ComponentE from "./components/componentE";
 import ParentCompoent from "./components/useCallbacksEx/ParentCompoent"
 import CounterMemo from "./components/useMemoHookEx/CounterMemo";
 import FocusInput from './components/useRefHook/FocusInput'
+import HookTimer from "./components/useRefHook/HookTimer";
 import React from "react";
 
 
@@ -14,6 +15,7 @@ export const AddressContext = React.createContext();
 function App() {
   return (
     <div className="App">
+      <HookTimer/>
       {/* <UserContext.Provider value={"Bivek Karki"}>
         <AddressContext.Provider value={"Dilibazar, Kathamndu"}>
          <ComponentD/>
@@ -21,7 +23,7 @@ function App() {
         </AddressContext.Provider>
       </UserContext.Provider> */}
       {/* <CounterMemo/> */}
-      <FocusInput/>
+      {/* <FocusInput/> */}
      {/* <ParentCompoent/> */}
       {/* <UseReducerEx/> */}
       {/* <HookDataFetch /> */}
