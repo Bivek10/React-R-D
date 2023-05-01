@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import './useReducerEx.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -35,7 +36,7 @@ function UseReducerEx() {
     dispatch({ type: "COMPLETE", id: todo.id });
   };
 
-  return <div>
+  return <div className="checkbox__div">
    { todos.map((todo)=>(
     <div key={todo.id}>
     <label>

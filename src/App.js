@@ -2,7 +2,9 @@ import "./App.css";
 import ComponentD from "./components/UseContextEx";
 import UseReducerEx from "./components/UseReducerEx";
 import ComponentE from "./components/componentE";
+import ParentCompoent from "./components/useCallbacksEx/ParentCompoent"
 import React from "react";
+
 
 export const UserContext = React.createContext();
 export const AddressContext = React.createContext();
@@ -10,7 +12,6 @@ export const AddressContext = React.createContext();
 function App() {
   return (
     <div className="App">
-    
       {/* <UserContext.Provider value={"Bivek Karki"}>
         <AddressContext.Provider value={"Dilibazar, Kathamndu"}>
          <ComponentD/>
@@ -18,8 +19,8 @@ function App() {
         </AddressContext.Provider>
       </UserContext.Provider> */}
 
-
-      <UseReducerEx/>
+     <ParentCompoent/>
+      {/* <UseReducerEx/> */}
       {/* <HookDataFetch /> */}
       {/* <IntervalHookCounter/> */}
       {/* <MouseContainer/> */}

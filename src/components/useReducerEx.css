@@ -1,0 +1,21 @@
+.checkbox__div{
+    background: red;
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+    color:blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.checkbox__div, lable{
+    font-size: 2rem;
+    color: gree;
+}
+
+/* .checkbox__div, input{
+    height: 1rem;
+    width: 1rem;
+} */
