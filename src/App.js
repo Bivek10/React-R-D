@@ -11,20 +11,21 @@ import SubscribeComp from "./components/Subscribe";
 import Counter from "./components/Counter";
 import Timer from "./components/Timer";
 import UseContextExOne from "./components/GlobalStateComponent/UseContextExOne";
+import UseContextExTwo from "./components/GlobalStateComponent/UseContextExTwo";
 import React from "react";
 
-export const userContext = React.createContext()
-
+export const userContext = React.createContext();
 
 function App() {
-
-  
   return (
     <div className="App">
-      <userContext.Provider value={{username:"Bivek Karki"}}>
+      {/* <userContext.Provider value={{username:"Bivek Karki"}}>
       <UseContextExOne/>
+      </userContext.Provider> */}
+      <userContext.Provider value={{username:"Bivek Karki"}}>
+        <UseContextExTwo />
       </userContext.Provider>
-      
+
       {/* <Timer/> */}
       {/* <Counter /> */}
       {/* <SubscribeComp/> */}
