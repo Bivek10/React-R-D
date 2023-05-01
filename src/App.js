@@ -10,11 +10,22 @@ import RenderPersonList from "./components/PersonList";
 import SubscribeComp from "./components/Subscribe";
 import Counter from "./components/Counter";
 import Timer from "./components/Timer";
+import UseContextExOne from "./components/GlobalStateComponent/UseContextExOne";
+import React from "react";
+
+export const userContext = React.createContext()
+
 
 function App() {
+
+  
   return (
     <div className="App">
-      <Timer/>
+      <userContext.Provider value={{username:"Bivek Karki"}}>
+      <UseContextExOne/>
+      </userContext.Provider>
+      
+      {/* <Timer/> */}
       {/* <Counter /> */}
       {/* <SubscribeComp/> */}
       {/* <Avatar user={Profiledata.user} />
