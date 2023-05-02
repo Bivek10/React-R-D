@@ -3,8 +3,10 @@ import Header from './Header'
 
 function ContactUs() {
   return (
-    <div>
-        <Header/>
+   
+    <div >
+       <Header/>
+        contact us
     </div>
   )
 }
