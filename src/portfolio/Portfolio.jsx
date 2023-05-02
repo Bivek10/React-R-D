@@ -4,7 +4,7 @@ import Header from './Header'
 function Portfolio() {
   return (
     <div>
-        <Header/>
+      
         Portfolio</div>
   )
 }

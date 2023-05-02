@@ -1,24 +1,29 @@
 import React from 'react';
+import { AiOutlineCopyright } from 'react-icons/ai';
+import { BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { CgMail } from 'react-icons/cg';
+import { TbWorldWww } from 'react-icons/tb';
 import styled from 'styled-components';
 import Logo from '../../src/assets/me.jpg';
-import {FaAddressBook} from 'react-icons/fa';
-import {TiContacts} from 'react-icons/ti';
-import {AiOutlineCopyright} from 'react-icons/ai';
-import {TbWorldWww} from 'react-icons/tb';
-import {BsInstagram, BsGithub, BsTwitter} from 'react-icons/bs';
-import {CgMail} from 'react-icons/cg';
 
-import SocialIcon from './components/SocialIcon';
-import Button from './components/ButtonComp';
 import ButtonComp from './components/ButtonComp';
+import SocialIcon from './components/SocialIcon';
+
+import { Route, Routes } from "react-router-dom";
+import Error from '../components/routing/Error';
+import About from './About';
+import Contact from "./Contact";
+import Home from './Home';
+import Portfolio from "./Portfolio";
+import Navbarcomponent from './components/Navbarcomponent';
+import Services from './Services';
 
 const HeaderSection = styled.section`
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: hidden; 
 `;
 
  const ProfileCard= styled.div`
@@ -26,12 +31,12 @@ const HeaderSection = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    margin: 50px 40px;
+    width: 20%;
+    margin: 50px 40px 0px 50px;
     border-radius: 1rem;
     border: 1px solid var(--color-light);
     padding: 40px 30px;
-    position: fixed;
+    /* position: fixed; */
  `;
 
 const PorfileCardTitle= styled.div`
@@ -48,9 +53,8 @@ const PorfileCardTitle= styled.div`
 
 `
  const ContentSection = styled.div `
-    width: 100%;
-    height: 90vh;
     background-color: red;
+    width: 65%;
  `
 
 const ProfileImage= styled.div`
@@ -65,6 +69,16 @@ const ProfileImage= styled.div`
         height: 250px;
         border-radius: inherit;
     }
+`
+
+const NavSection= styled.div`
+    width: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin:0px 50px;
+
 `
 
  const ProfileSubTitle= styled.div`
@@ -111,6 +125,8 @@ const socialIconProps =[
     },
 ]
 
+
+
 const buttonProps ={
     name:"Hire Me",
     showIcon:true,
@@ -144,8 +160,20 @@ function Header() {
             <ButtonComp arg={buttonProps}/>
         </ProfileCard>
         <ContentSection>
-            <p>hello Bivek</p>
-        </ContentSection>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/portfolio" element={<Portfolio/>}></Route>
+          <Route path="/services" element={<Services/>}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="*" element={<Error/>}></Route>
+        </Routes>
+    </ContentSection>
+    
+    <NavSection>
+        <Navbarcomponent/>
+    </NavSection>
+   
     </HeaderSection>
   )
 }

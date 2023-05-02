@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./portfolio/Header";
 import "./App.css";
 import Home from "./portfolio/Home";
 import About from "./portfolio/About";
@@ -13,6 +14,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+       <Header/>
+      </BrowserRouter>
+    
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
@@ -20,7 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="*" element={<Error/>}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }

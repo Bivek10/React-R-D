@@ -5,7 +5,7 @@ function testimonials() {
   return (
     
     <div>
-        <Header/>
+        
         testimonials
         </div>
   )

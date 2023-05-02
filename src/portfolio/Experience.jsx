@@ -4,7 +4,7 @@ import Header from './Header'
 function Experience() {
   return (
     <div>
-       <Header/>
+       
         Experience</div>
   )
 }

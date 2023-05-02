@@ -3,9 +3,10 @@ import Header from './Header'
 
 function Home() {
   return (
-    <div>
-        <Header/>
-    Home</div>
+    <div
+       style={{
+        height:"100vh"
+       }}>Home</div>
   )
 }
 
