@@ -4,27 +4,54 @@ import Logo from '../../src/assets/me.jpg';
 import {FaAddressBook} from 'react-icons/fa';
 import {TiContacts} from 'react-icons/ti';
 import {AiOutlineCopyright} from 'react-icons/ai';
+import {TbWorldWww} from 'react-icons/tb';
+import {BsInstagram, BsGithub, BsTwitter} from 'react-icons/bs';
+import {CgMail} from 'react-icons/cg';
+
+import SocialIcon from './components/SocialIcon';
+import Button from './components/ButtonComp';
+import ButtonComp from './components/ButtonComp';
 
 const HeaderSection = styled.section`
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     overflow: hidden;
 `;
 
  const ProfileCard= styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 300px;
-    height: 90vh;
     margin: 50px 40px;
     border-radius: 1rem;
     border: 1px solid var(--color-light);
     padding: 40px 30px;
+    position: fixed;
  `;
 
 const PorfileCardTitle= styled.div`
     display: flex;
     justify-content: space-between;   
     align-items: center;
+    h2,h6 {
+        line-height: 1.2;
+    }
+
+    .copyright{
+        font-size: 10px;
+    }
+
 `
+ const ContentSection = styled.div `
+    width: 100%;
+    height: 90vh;
+    background-color: red;
+ `
 
 const ProfileImage= styled.div`
     border-radius: 1rem;
@@ -42,7 +69,7 @@ const ProfileImage= styled.div`
 
  const ProfileSubTitle= styled.div`
 
-    margin-top: 15px;
+    margin-top: 20px;
     align-items: center;
     text-align: center;
     h4{
@@ -50,13 +77,10 @@ const ProfileImage= styled.div`
         line-height: 1.2;
         font-weight: 400;
     }
-    i{
-        justify-content: center;
-        align-items: center;
-    }
+    
  `
 const  CopyRightTitle= styled.div`
-    margin-top: 15px;
+    margin-top: 20px;
     align-items: center;
     text-align: center;
     p{
@@ -64,14 +88,45 @@ const  CopyRightTitle= styled.div`
     }
     
 `
+const socialIconProps =[
+    {
+        key:"twitter",
+        label:"Twitter",
+        icon:<BsTwitter size={16}/>
+    },
+    {
+        key:"website",
+        label:"Website",
+        icon:<TbWorldWww size={16}/>
+    },
+    {
+        key:"instagram",
+        label:"Instagram",
+        icon:<BsInstagram size={16}/>
+    },
+    {
+        key:"github",
+        label:"Github",
+        icon:<BsGithub size={16}/>
+    },
+]
 
+const buttonProps ={
+    name:"Hire Me",
+    showIcon:true,
+    icon:<CgMail size={16}/>,
+    onPressed:function (){
+        console.log(buttonProps.name)
+    }
+}
 
 function Header() {
   return (
     <HeaderSection>
         <ProfileCard>
             <PorfileCardTitle>
-                <h4>Bivek Karki</h4>
+                <h2> Bivek Karki  </h2> 
+                {/* <span className='copyright'><AiOutlineCopyright/></span> */}
                 <h6>Full Stack Developer</h6>
             </PorfileCardTitle>
             <ProfileImage>
@@ -85,7 +140,12 @@ function Header() {
                     <AiOutlineCopyright/> 2023 Bivek. All right reserved 
                 </p>
             </CopyRightTitle>
+            <SocialIcon menudata={socialIconProps}/>
+            <ButtonComp arg={buttonProps}/>
         </ProfileCard>
+        <ContentSection>
+            <p>hello Bivek</p>
+        </ContentSection>
     </HeaderSection>
   )
 }
