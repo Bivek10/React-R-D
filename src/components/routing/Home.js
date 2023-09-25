@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import TodoList from "../apis/todo_list_user_query";
+import CreateUserForm from "../apis/todo_list_use_mutate";
 
 function Home() {
   return (
     <div>
       <Header />
-      <TodoList />
+      <CreateUserForm />
     </div>
   );
 }
